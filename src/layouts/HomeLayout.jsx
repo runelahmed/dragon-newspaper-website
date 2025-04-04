@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header/Header'
 import NewsLetter from '../components/NewsLetter/NewsLetter'
 import Navbar from '../components/Navbar/Navbar'
@@ -8,6 +8,10 @@ import RightNavbar from '../components/RightNavbar/RightNavbar'
 import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
+
+    useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []);
   return (
       <div>
           <header>

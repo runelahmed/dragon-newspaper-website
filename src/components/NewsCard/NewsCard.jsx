@@ -33,6 +33,9 @@ const NewsCard = ({ news }) => {
       </div>
 
       <div className="card-body">
+        <Link to={`/news/${news._id}`} className="card-title text-lg font-bold">
+          {news.title}
+        </Link>
         <figure>
           <img
             src={news.image_url}
@@ -40,7 +43,6 @@ const NewsCard = ({ news }) => {
             className="w-full h-[262px] object-cover rounded-md"
           />
         </figure>
-        <Link to={news._id} className="card-title text-lg font-bold">{news.title}</Link>
         <p className="text-gray-600 text-sm">{description}</p>
         <div className="card-actions justify-start mt-2">
           <button
